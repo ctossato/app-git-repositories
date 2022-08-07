@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
                 is MainViewModel.State.Error -> {
                     dialog.dismiss()
                     createDialog{
-                        setMessage(it.error.message)
+                        setMessage(R.string.msg_error_repo_list)
                     }.show()
                 }
                 MainViewModel.State.Loading -> {
@@ -44,13 +44,15 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
                     dialog.dismiss()
                     if (it.list.isEmpty()) {
                         createDialog{
-                            setMessage("Nenhum repositório encontrado")
+                            setMessage(R.string.msg_empty_repo_list)
                         }.show()
                     }
                     gitRepoAdapter.submitList(it.list)
                 }
             }
         }
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

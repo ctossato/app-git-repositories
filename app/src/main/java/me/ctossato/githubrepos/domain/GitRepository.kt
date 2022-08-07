@@ -19,7 +19,11 @@ data class GitRepository (
     val languages: String,
     @SerializedName("owner")
     @JsonAdapter(AvatarDeserializer::class)
-    val ownerAvatar: String
+    val ownerAvatar: String,
+    @SerializedName("html_url")
+    val html: String,
+    val forks: Int,
+    val watchers: Int
         )
 
 class AvatarDeserializer : JsonDeserializer<String?> {

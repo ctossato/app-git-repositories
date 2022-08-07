@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">github Repos</string>
     <string name="action_search">Pesquisar</string>
+    <string name="btn_open_repo">ABRIR NO BROWSER</string>
+    <string name="msg_empty_repo_list">Nenhum repositório encontrado</string>
+    <string name="msg_error_repo_list">Erro ao obter a lista de repositórios. Por favor, confira sua conexão.</string>
 </resources>
